@@ -1,1 +1,27 @@
+# 📂 Data
 
+This folder contains the dataset used for building the Customer Churn Prediction model.
+
+## 📊 Dataset Overview
+The dataset includes customer demographic details, account information, and service usage patterns. It is used to analyze and predict whether a customer is likely to churn.
+
+## 🔑 Key Features
+- Customer demographics (gender, senior citizen, dependents)
+- Account details (tenure, contract type)
+- Services used (internet, streaming, support)
+- Billing information (monthly charges, payment method)
+- Target variable: Churn (Yes/No)
+
+## ⚙️ Usage
+The dataset is used for:
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Model Training
+
+## 🧹 Data Processing
+- Handled missing values
+- Encoded categorical variables
+- Scaled numerical features (if required)
+
+## 📌 Note
+This dataset is for educational and project purposes only.
