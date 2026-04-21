@@ -1,15 +1,16 @@
 import streamlit as st
 import joblib
 import pandas as pd
-
-import streamlit as st
-import joblib
+import os
 
 @st.cache_resource
 def load_model():
-    return joblib.load("churn_pred_model.pkl")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, "churn_pred_model.pkl")
+    return joblib.load(model_path)
 
 model = load_model()
+
 st.set_page_config(page_title="Churn Predictor", layout="wide")
 
 st.title("📊 Customer Churn Prediction App")
@@ -56,7 +57,7 @@ monthly_charges = st.sidebar.slider("Monthly Charges", 18, 118, 50)
 if st.button("🚀 Predict Churn"):
 
     with st.spinner("Analyzing customer behavior..."):
-        
+
         input_data = pd.DataFrame([{
             "gender": gender,
             "senior_citizen": senior_citizen,
