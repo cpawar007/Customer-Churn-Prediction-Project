@@ -2,7 +2,7 @@
 An end-to-end Machine Learning project that predicts whether a customer is likely to churn based on their behavior and account details.
 
 ## Live App
-👉 https://your-app-name.streamlit.app
+https://customer-churn-prediction-project007.streamlit.app/
 
 ## Project Overview
 Customer churn is a critical problem for businesses. This project aims to analyze customer data and build a predictive model that identifies customers who are likely to leave.
