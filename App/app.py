@@ -2,12 +2,14 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-import os
+import streamlit as st
+import joblib
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "churn_pred_model.pkl")
+@st.cache_resource
+def load_model():
+    return joblib.load("churn_pred_model.pkl")
 
-model = joblib.load(model_path)
+model = load_model()
 st.set_page_config(page_title="Churn Predictor", layout="wide")
 
 st.title("📊 Customer Churn Prediction App")
